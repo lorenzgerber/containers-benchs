@@ -64,7 +64,7 @@ static REAL second   (void);
 static void *mempool;
 
 
-int main(void)
+void main(void)
 
     {
     char    buf[80];
@@ -82,7 +82,7 @@ int main(void)
         {
         end = time(NULL);
         elapsed = difftime(end, start);
-        if (elapsed >= 60.0 /* seconds */)
+        if (elapsed >= 120.0 /* seconds */)
             {
             terminate = 0;
             }
@@ -126,7 +126,6 @@ int main(void)
             printf("\n");
             }
         }
-    return 0;
     }
 
 
