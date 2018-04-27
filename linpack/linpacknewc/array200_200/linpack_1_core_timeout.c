@@ -82,7 +82,7 @@ void main(void)
         {
         end = time(NULL);
         elapsed = difftime(end, start);
-        if (elapsed >= 120.0 /* seconds */)
+        if (elapsed >= 60.0 /* seconds */)
             {
             terminate = 0;
             }
