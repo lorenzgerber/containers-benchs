@@ -7,6 +7,6 @@ RUN wget https://raw.githubusercontent.com/lorenzgerber/containers-benchs/master
 RUN gcc -O3 -march=native -o linpack_simple -lm linpack_1_core_timeout.c
 
 # run the benchs
-RUN /usr/bin/time -o time_simple_linpack.o ./linpack_simple > results_simple_linpack.o
+RUN /usr/bin/time -o time_simple_linpack.o ./linpack_simple > results_simple_linpack.o; exit 0;
 
 CMD bash get_flops.sh results_simple_linpack.o && cat time_simple_linpack.o
