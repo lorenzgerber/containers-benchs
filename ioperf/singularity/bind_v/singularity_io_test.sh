@@ -8,6 +8,6 @@ echo "                                                              random    ra
               kB  reclen    write  rewrite    read    reread    read     write     read   rewrite      read   fwrite frewrite    fread  freread" >> singularity_io.out
 for i in {1..10}
 do
-	singularity exec ../iozone.img iozone –Ra –g 2G > tmp.out && sed -n '26,27 p' tmp.out >> singularity_io.out
+	singularity exec ../iozone.img iozone –Ra –g 2G > tmp.out && sed -n '26 p' tmp.out >> singularity_io.out
 done
 

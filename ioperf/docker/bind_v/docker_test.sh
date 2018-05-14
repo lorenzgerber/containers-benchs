@@ -8,5 +8,5 @@ echo "                                                              random    ra
               kB  reclen    write  rewrite    read    reread    read     write     read   rewrite      read   fwrite frewrite    fread  freread" >> docker_io.out
 for i in {1..10}
 do
-	docker run --rm -v /tmp:/tmp ashael/iozone ./iozone –Ra –g 2G -U /tmp -f /tmp/testfile > tmp.out && sed -n '26,27 p' tmp.out >> docker_io.out
+	docker run --rm --mount source=myvol,target=/tmp lorenzgerber/iozone ./iozone –Ra –g 2G -f /tmp/testfile > tmp.out && sed -n '26 p' tmp.out >> docker_io.out
 done
