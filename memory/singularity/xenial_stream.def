@@ -12,6 +12,6 @@ IncludeCmd: yes
 # Download and compile STREAM benchmark
 	cd /home
 	wget 'https://raw.githubusercontent.com/jeffhammond/STREAM/master/stream.c' -O stream.c
-	gcc -O2 -fopenmp stream.c -o stream_benchmark && cp stream_benchmark /bin
+	gcc -O2 stream.c -o stream_benchmark && cp stream_benchmark /bin
 
 # Done

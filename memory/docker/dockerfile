@@ -10,7 +10,7 @@ RUN apt-get install -y binutils wget git
 # Download and compile STREAM benchmark
 WORKDIR /home
 RUN wget 'https://raw.githubusercontent.com/jeffhammond/STREAM/master/stream.c' -O stream.c
-RUN gcc -O2 -fopenmp stream.c -o stream_benchmark && cp stream_benchmark /bin/
+RUN gcc -O2 stream.c -o stream_benchmark && cp stream_benchmark /bin/
 
 ENTRYPOINT ["stream_benchmark"]
 

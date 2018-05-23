@@ -3,7 +3,7 @@ MAINTAINER lorenzottogerber@gmail.com
 
 # Satisfy deps
 RUN apt-get update && \
-    apt-get install -y gcc make curl && \
+    apt-get install -y gcc make curl iputils-ping && \
     apt-get clean && \
     rm -rf /tmp/* /var/tmp/* && \
     rm -rf /var/lib/apt/lists/* && \
